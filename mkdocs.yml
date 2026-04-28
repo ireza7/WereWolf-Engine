@@ -30,6 +30,7 @@ plugins:
         - locale: en
           name: English
           build: true
+          default: true
         - locale: fa
           name: فارسی
           build: true
