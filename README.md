@@ -1,11 +1,3 @@
-# WereWolf-Engine
----
-
-## `README.md` – محتوای پیشنهادی
-
-(فایل `README.md` را در ریشهٔ پروژه بساز و متن زیر را جایگذاری کن. بخش `نام تو` و لینک‌ها را شخصی‌سازی کن.)
-
-```markdown
 # WereWolf Engine
 
 A flexible, extensible Werewolf (Mafia) game engine for Python.  
@@ -30,7 +22,7 @@ pip install werewolf-engine
 *Note: The package is published on PyPI (coming soon). For the development version:*
 
 ```bash
-git clone https://github.com/your-username/WereWolf-Engine.git
+git clone https://github.com/ireza7/WereWolf-Engine.git
 cd WereWolf-Engine
 pip install -e ".[dev]"
 ```
@@ -169,13 +161,3 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 ```
 
 ---
-
-## گام بعدی
-
-پس از نوشتن `README.md`، آن را commit و push کن:
-
-```powershell
-git add README.md
-git commit -m "Add comprehensive README"
-git push
-```
