@@ -1,0 +1,61 @@
+site_name: "WereWolf Engine"
+site_description: "A flexible Werewolf game engine for Python"
+site_author: "نام تو"
+repo_url: https://github.com/your-username/WereWolf-Engine
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+  - i18n:
+      default_language: en
+      languages:
+        en:
+          name: English
+          build: true
+        fa:
+          name: فارسی
+          build: true
+      nav_translations:
+        fa:
+          Home: خانه
+          "Getting Started": شروع کار
+          Roles: نقش‌ها
+          Events: رویدادها
+          "API Reference": مرجع API
+          Contributing: مشارکت
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Roles: roles.md
+  - Events: events.md
+  - API Reference: api-reference.md
+  - Contributing: contributing.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
