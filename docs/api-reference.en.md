@@ -1,4 +1,4 @@
-```markdown
+
 # API Reference
 
 This section covers the main classes and functions exposed by the werewolf engine.

@@ -1,4 +1,3 @@
-```markdown
 # Roles
 
 The engine ships with six roles. You can easily add your own.

@@ -1,4 +1,3 @@
-```markdown
 # Events
 
 The engine emits events that you can hook into to update your UI.

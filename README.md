@@ -44,12 +44,11 @@ while game.phase != Phase.END:
 
 Full documentation is available in English and Persian:
 
-- [English Docs](https://werewolf-engine.readthedocs.io/en/)
-- [مستندات فارسی](https://werewolf-engine.readthedocs.io/fa/)
+- [English Docs](https://ireza7.github.io/WereWolf-Engine/en/)
+- [مستندات فارسی](https://ireza7.github.io/WereWolf-Engine/fa/)
 
 Learn about roles, events, API reference, and how to contribute.
 
 ## License
 
 This project is licensed under the MIT License.
-```

@@ -1,4 +1,3 @@
-```markdown
 # WereWolf Engine
 
 **A flexible, extensible Werewolf (Mafia) game engine for Python.**

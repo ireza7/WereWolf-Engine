@@ -1,4 +1,3 @@
-```markdown
 # Contributing
 
 Thank you for considering contributing to WereWolf Engine!
