@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write # برای نوشتن در برنچ gh-pages لازم است
+  contents: write
 
 jobs:
   deploy:
@@ -15,6 +15,6 @@ jobs:
         with:
           python-version: 3.x
       - name: Install dependencies
-        run: pip install mkdocs-material mkdocs-static-i18n
+        run: pip install mkdocs-material mkdocs-static-i18n mkdocstrings[python]
       - name: Build and Deploy
         run: mkdocs gh-deploy --force
