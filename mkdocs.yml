@@ -1,7 +1,7 @@
 site_name: "WereWolf Engine"
 site_description: "A flexible Werewolf game engine for Python"
 site_author: "نام تو"
-repo_url: https://github.com/your-username/WereWolf-Engine
+repo_url: https://github.com/ireza7/WereWolf-Engine
 edit_uri: edit/main/docs/
 
 theme:
@@ -27,10 +27,10 @@ plugins:
   - i18n:
       default_language: en
       languages:
-        en:
+        - locale: en
           name: English
           build: true
-        fa:
+        - locale: fa
           name: فارسی
           build: true
       nav_translations:
