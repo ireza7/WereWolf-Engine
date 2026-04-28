@@ -1,9 +1,7 @@
 name: Deploy Docs to GitHub Pages
 
-#on:
-  push:
-    branches:
-      - main # یا master، هر برنچی که مستندات را در آن به‌روز می‌کنید
+on:
+  workflow_dispatch:
 
 permissions:
   contents: write # برای نوشتن در برنچ gh-pages لازم است
