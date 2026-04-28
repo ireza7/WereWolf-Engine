@@ -1,0 +1,27 @@
+Metadata-Version: 2.4
+Name: werewolf-engine
+Version: 0.1.0
+Summary: A flexible, extensible Werewolf game engine for Python
+Author-email: ireza7 <reza38937@gmail.com>
+License-Expression: MIT
+Project-URL: Homepage, https://github.com/ireza7/werewolf-engine
+Project-URL: Bug Tracker, https://github.com/ireza7/werewolf-engine/issues
+Keywords: werewolf,game,engine,mafia,social-deduction
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Games/Entertainment :: Board Games
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+Requires-Dist: pytest>=7.0; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: black; extra == "dev"
+
+# WereWolf-Engine

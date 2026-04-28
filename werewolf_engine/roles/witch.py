@@ -27,13 +27,12 @@ class Witch(BaseRole):
 
     def get_available_targets(self, game: "Game", player: "Player") -> List["Player"]:
         candidates = []
-        if not self._heal_used:
-            victims = getattr(game, "_night_kill_victims", [])
-            for v in victims:
-                candidates.append(v)
+        victims = getattr(game, '_night_kill_victims', [])
+        if not self._heal_used and victims:
+            candidates.extend(victims)
         if not self._kill_used:
             for p in game.players:
-                if p.is_alive() and p not in candidates:
+                if p.is_alive() and p.id != player.id:   # <-- از خودش نزنه
                     candidates.append(p)
         return candidates
 

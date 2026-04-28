@@ -25,8 +25,8 @@ class Werewolf(BaseRole):
         ]
 
     def perform_night_action(self, game: "Game", actor: "Player", target: "Player") -> None:
-        # ثبت هدف شکار امشب (توسط هر گرگینه)
         game._wolf_target_id = target.id
+        game._night_kill_victims = [target]
 
     # ----- اطلاعات خصوصی -----
     def get_private_info(self, game: "Game", player: "Player") -> dict:

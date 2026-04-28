@@ -7,15 +7,14 @@ name = "werewolf-engine"
 version = "0.1.0"
 description = "A flexible, extensible Werewolf game engine for Python"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
-    {name = "[ireza7]", email = "[reza38937@gmail.com]"}
+    {name = "ireza7", email = "reza38937@gmail.com"}
 ]
 keywords = ["werewolf", "game", "engine", "mafia", "social-deduction"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
