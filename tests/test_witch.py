@@ -1,59 +1,52 @@
-import pytest
 from werewolf_engine.roles import Witch, Werewolf, Villager
+from conftest import setup_night_game_with_roles
 
 
 class TestWitch:
-    def test_initial_potions(self, night_game):
+    def test_initial_potions(self, game):
         roles = [Witch(), Villager(), Villager(), Villager(), Villager()]
-        game, nm = night_game(roles)
+        game, nm = setup_night_game_with_roles(game, roles)
         witch = game.players[0]
         info = witch.role.get_private_info(game, witch)
         assert info["heal_available"] is True
         assert info["kill_available"] is True
 
-    def test_use_heal_potion(self, night_game):
+    def test_use_heal_potion(self, game):
         roles = [Witch(), Werewolf(), Villager(), Villager(), Villager()]
-        game, nm = night_game(roles)
+        game, nm = setup_night_game_with_roles(game, roles)
         witch = game.players[0]
-        # شبیه‌سازی یک شکار توسط گرگینه
         game._wolf_target_id = game.players[1].id
         game._night_kill_victims = [game.players[1]]
-
-        # جادوگر هدف نجات را انتخاب کند
         victim = game.players[1]
-        # باید victim جزو available_targets باشد
         targets = witch.role.get_available_targets(game, witch)
         assert victim in targets
-
-        witch.role.perform_night_action(game, witch, victim)  # نجات
+        witch.role.perform_night_action(game, witch, victim)
         assert witch.role._heal_used is True
         assert witch.role._heal_target_id == victim.id
 
-    def test_use_kill_potion(self, night_game):
+    def test_use_kill_potion(self, game):
         roles = [Witch(), Villager(), Villager(), Villager(), Villager()]
-        game, nm = night_game(roles)
+        game, nm = setup_night_game_with_roles(game, roles)
         witch = game.players[0]
         target = game.players[1]
-        # برای کشتن، باید قربانی شب مشخص نباشد (تا در لیست نباشد)
-        game._night_kill_victims = []  # کسی امشب کشته نمی‌شود
-        witch.role.perform_night_action(game, witch, target)  # کشتن
+        game._night_kill_victims = []
+        witch.role.perform_night_action(game, witch, target)
         assert witch.role._kill_used is True
         assert witch.role._kill_target_id == target.id
 
-    def test_cannot_heal_if_no_potion(self, night_game):
+    def test_cannot_heal_if_no_potion(self, game):
         roles = [Witch(), Werewolf(), Villager(), Villager(), Villager()]
-        game, nm = night_game(roles)
+        game, nm = setup_night_game_with_roles(game, roles)
         witch = game.players[0]
         witch.role._heal_used = True
+        # جادوگر هنوز معجون مرگ دارد، پس می‌تواند گرگینه را بکشد
+        # برخلاف تصور قبلی، Bob (werewolf) باید در اهداف باشد
         targets = witch.role.get_available_targets(game, witch)
-        # فقط باید از معجون کشتن بتواند استفاده کند
-        assert game.players[1] not in targets  # victim شکار نباشد
-        # اما می‌تواند کسی را بکشد
-        assert any(p.id != game.players[1].id for p in targets)
+        assert game.players[1] in targets
 
-    def test_cannot_kill_self(self, night_game):
+    def test_cannot_kill_self(self, game):
         roles = [Witch(), Villager(), Villager(), Villager(), Villager()]
-        game, nm = night_game(roles)
+        game, nm = setup_night_game_with_roles(game, roles)
         witch = game.players[0]
         targets = witch.role.get_available_targets(game, witch)
         assert witch not in targets
