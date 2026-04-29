@@ -9,7 +9,7 @@ pip install werewolf-engine
 For the latest development version:
 
 ```bash
-git clone https://github.com/your-username/WereWolf-Engine
+git clone https://github.com/ireza7/WereWolf-Engine
 cd WereWolf-Engine
 pip install -e ".[dev]"
 ```
@@ -109,7 +109,6 @@ restored_game = Game.from_dict(data)
 
 ## Next Steps
 
-- Learn about the built‑in [Roles](roles.md).
-- Use the [Event system](events.md) to build a real‑time bot.
-- Check the [API Reference](api-reference.md) for internal details.
-```
+- Learn about the built‑in [Roles](Roles).
+- Use the [Event system](Events) to build a real‑time bot.
+- Check the [API Reference](API-Reference) for internal details.

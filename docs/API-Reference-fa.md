@@ -91,4 +91,3 @@ Enum با مقادیر: `LOBBY`, `NIGHT`, `DAY`, `END`.
 - `GameNotStartedError`: وقتی عملیات قبل از شروع بازی صدا زده می‌شود.
 - `GameOverError`: وقتی عملیات بعد از پایان بازی صدا زده می‌شود.
 - `PlayerNotFoundError`: شناسهٔ بازیکن نامعتبر.
-```

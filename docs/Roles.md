@@ -40,5 +40,4 @@ register_role("cupid", Cupid)
 
 Now `"cupid"` can be used in `GameConfig.role_counts`.
 
-See [API Reference](api-reference.md) for the complete `BaseRole` interface.
-```
+See [API Reference](API-Reference) for the complete `BaseRole` interface.

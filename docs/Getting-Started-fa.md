@@ -9,7 +9,7 @@ pip install werewolf-engine
 برای نسخهٔ در حال توسعه:
 
 ```bash
-git clone https://github.com/your-username/WereWolf-Engine
+git clone https://github.com/ireza7/WereWolf-Engine
 cd WereWolf-Engine
 pip install -e ".[dev]"
 ```
@@ -109,7 +109,6 @@ restored_game = Game.from_dict(data)
 
 ## گام‌های بعدی
 
-- آشنایی با [نقش‌ها](roles.md).
-- استفاده از [سیستم رویدادها](events.md) برای ساخت ربات.
-- مشاهدهٔ [مرجع API](api-reference.md) برای جزئیات فنی.
-```
+- آشنایی با [نقش‌ها](Roles-fa).
+- استفاده از [سیستم رویدادها](Events-fa) برای ساخت ربات.
+- مشاهدهٔ [مرجع API](API-Reference-fa) برای جزئیات فنی.

@@ -40,5 +40,4 @@ register_role("cupid", Cupid)
 
 اکنون می‌توانید `"cupid"` را در `GameConfig.role_counts` استفاده کنید.
 
-برای دیدن رابط کامل نقش، به [مرجع API](api-reference.md) مراجعه کنید.
-```
+برای دیدن رابط کامل نقش، به [مرجع API](API-Reference-fa) مراجعه کنید.

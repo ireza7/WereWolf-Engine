@@ -1,4 +1,3 @@
-
 # API Reference
 
 This section covers the main classes and functions exposed by the werewolf engine.
@@ -92,4 +91,3 @@ Abstract base class for all roles. Defines the following interface (all optional
 - `GameNotStartedError`: Raised when an operation is called before game start.
 - `GameOverError`: Raised when an operation is called after game over.
 - `PlayerNotFoundError`: Raised for an invalid player ID.
-```

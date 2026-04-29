@@ -19,4 +19,3 @@ game.events.on("night_started", lambda round_num, actors: print(f"Night {round_n
 | `vote_cast` | `voter_id`, `target_id` | A vote was recorded. |
 | `player_killed` | `player` (Player), `cause` (str) | A player died. |
 | `game_over` | `winner` (str) | Game ended. Winner can be "village", "werewolf", or a custom team name. |
-```

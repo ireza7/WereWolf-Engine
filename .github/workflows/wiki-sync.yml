@@ -1,0 +1,43 @@
+name: Sync docs to Wiki
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "docs/**"
+      - ".github/workflows/wiki-sync.yml"
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main repo
+        uses: actions/checkout@v4
+        with:
+          path: main
+
+      - name: Checkout wiki repo
+        uses: actions/checkout@v4
+        with:
+          repository: "ireza7/WereWolf-Engine.wiki"
+          path: wiki
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy docs to wiki
+        run: |
+          rm -rf wiki/*
+          cp -r main/docs/* wiki/
+
+      - name: Commit and push to wiki
+        working-directory: wiki
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Sync docs from main repo"
+            git push
+          fi

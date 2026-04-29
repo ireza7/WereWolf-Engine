@@ -1,10 +1,19 @@
 # WereWolf Engine
 
-**A flexible, extensible Werewolf (Mafia) game engine for Python.**
+A flexible, extensible Werewolf (Mafia) game engine for Python.  
+Build your own bot, web app, or CLI game using a clean library with zero I/O dependencies.
 
-Build your own Telegram bot, web app, or CLI game with a clean library that has zero I/O dependencies.
+## 🚀 Quick Links
 
-## Features
+- [Getting Started](Getting-Started)
+- [Roles](Roles)
+- [Events](Events)
+- [API Reference](API-Reference)
+- [Contributing](Contributing)
+
+[مستندات فارسی](Home-fa)
+
+## ✨ Features
 
 - 🎭 **6 built‑in roles:** Villager, Werewolf, Seer, Doctor, Witch, Hunter.
 - 🔌 **Plugin‑friendly role system:** Register custom roles without touching the engine code.
@@ -14,7 +23,13 @@ Build your own Telegram bot, web app, or CLI game with a clean library that has 
 - 💾 **Serialization:** Save and restore complete game state with `to_dict()` / `from_dict()`.
 - ✅ **Thoroughly tested:** 23+ automated tests covering all roles and phases.
 
-## Quick Example
+## 📦 Installation
+
+```bash
+pip install werewolf-engine
+```
+
+## ⚡ Quick Example
 
 ```python
 from werewolf_engine import Game, GameConfig
@@ -31,16 +46,13 @@ config = GameConfig(role_counts={
 game = Game(["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Hank", "Ivy"], config)
 game.start()
 
-# Drive the game with your own UI
+# drive the game with your own UI
 while game.phase != Phase.END:
     if game.phase == Phase.NIGHT:
         actor = game.night_manager.current_actor
         if actor:
             targets = game.night_manager.get_available_targets(actor)
-            # get user input, then:
-            game.night_action(actor.id, choice)
-    # ... handle day voting similarly
-```
-
-Head over to the [Getting Started](getting-started.md) guide for detailed instructions.
+            # get user choice, then:
+            game.night_action(actor.id, chosen_target.id)
+    # handle day voting similarly...
 ```

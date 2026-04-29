@@ -6,7 +6,7 @@ Thank you for considering contributing to WereWolf Engine!
 
 - **Report bugs:** Open an issue on GitHub.
 - **Suggest features:** Start a discussion in the Issues section.
-- **Add a new role:** Create a role class and share it as a plugin (see [Roles](roles.md)).
+- **Add a new role:** Create a role class and share it as a plugin (see [Roles](Roles)).
 - **Improve tests:** Add test cases for edge scenarios.
 
 ## Development Setup
@@ -15,7 +15,7 @@ Thank you for considering contributing to WereWolf Engine!
 2. Clone your fork:
 
 ```bash
-git clone https://github.com/your-username/WereWolf-Engine.git
+git clone https://github.com/ireza7/WereWolf-Engine.git
 cd WereWolf-Engine
 ```
 
@@ -51,4 +51,3 @@ ruff check werewolf_engine tests
 ```
 
 Your contributions will be licensed under the same MIT License as the project.
-```

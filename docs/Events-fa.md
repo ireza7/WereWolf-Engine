@@ -19,4 +19,3 @@ game.events.on("night_started", lambda round_num, actors: print(f"شب دور {r
 | `vote_cast` | `voter_id`، `target_id` | یک رأی ثبت شد. |
 | `player_killed` | `player` (بازیکن)، `cause` (علت) | یک بازیکن کشته شد. |
 | `game_over` | `winner` (برنده) | بازی تمام شد. برنده می‌تواند `"village"`، `"werewolf"` یا یک تیم سفارشی باشد. |
-```
