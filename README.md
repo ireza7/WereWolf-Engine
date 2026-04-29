@@ -2,6 +2,8 @@
 
 A flexible, extensible Werewolf (Mafia) game engine for Python.
 
+[مستندات فارسی](https://github.com/ireza7/WereWolf-Engine/wiki/Home-fa) | [README فارسی](README-fa.md)
+
 [![Tests](https://github.com/ireza7/WereWolf-Engine/actions/workflows/tests.yml/badge.svg)](https://github.com/ireza7/WereWolf-Engine/actions)
 [![PyPI version](https://badge.fury.io/py/werewolf-engine.svg)](https://pypi.org/project/werewolf-engine/)
 
