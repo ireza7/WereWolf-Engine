@@ -3,7 +3,6 @@
 A flexible, extensible Werewolf (Mafia) game engine for Python.  
 Build your own bot, web app, or CLI game using a clean library with zero I/O dependencies.
 
-
 ## 🚀 Quick Links
 
 - [Getting Started](Getting-Started)
