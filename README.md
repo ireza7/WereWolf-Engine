@@ -30,24 +30,25 @@ config = GameConfig(role_counts={"villager": 3, "werewolf": 2, "seer": 1, "docto
 game = Game(["Alice", "Bob", "Charlie", "Diana", "Eve", "Frank", "Grace", "Hank", "Ivy"], config)
 game.start()
 
-# Drive the game with your own UI (bot, web, CLI...)
+# Drive the game with your own UI
 while game.phase != Phase.END:
     if game.phase == Phase.NIGHT:
         actor = game.night_manager.current_actor
         if actor:
             targets = game.night_manager.get_available_targets(actor)
-            # get user choice, then:
             game.night_action(actor.id, chosen_target.id)
 ```
 
 ## Documentation
 
-Full documentation is available in English and Persian:
+Full documentation is available in **English** and **Persian** on the [GitHub Wiki](https://github.com/ireza7/WereWolf-Engine/wiki).
 
-- [English Docs](https://ireza7.github.io/WereWolf-Engine/en/)
-- [مستندات فارسی](https://ireza7.github.io/WereWolf-Engine/fa/)
-
-Learn about roles, events, API reference, and how to contribute.
+- [Home](https://github.com/ireza7/WereWolf-Engine/wiki/Home)
+- [Getting Started](https://github.com/ireza7/WereWolf-Engine/wiki/Getting-Started)
+- [Roles](https://github.com/ireza7/WereWolf-Engine/wiki/Roles)
+- [Events](https://github.com/ireza7/WereWolf-Engine/wiki/Events)
+- [API Reference](https://github.com/ireza7/WereWolf-Engine/wiki/API-Reference)
+- [Contributing](https://github.com/ireza7/WereWolf-Engine/wiki/Contributing)
 
 ## License
 
